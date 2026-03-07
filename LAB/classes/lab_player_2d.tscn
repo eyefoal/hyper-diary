@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bsit1wdswthki"]
+
+[ext_resource type="Script" uid="uid://cmcl1wyx0khjl" path="res://LAB/classes/scripts/lab_player_2d.gd" id="1_dfvnb"]
+[ext_resource type="Texture2D" uid="uid://bhxllq1sjup3a" path="res://LAB/assets/misc/all_sprites/gbcatty1.png" id="2_g6ptg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0n8tf"]
+
+[node name="LabPlayer" type="CharacterBody2D" unique_id=708923162]
+script = ExtResource("1_dfvnb")
+
+[node name="Gbcatty1" type="Sprite2D" parent="." unique_id=272016728]
+texture = ExtResource("2_g6ptg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1985278492]
+shape = SubResource("CircleShape2D_0n8tf")
+debug_color = Color(0.65670675, 0.41358256, 0.8074941, 0.05490196)
