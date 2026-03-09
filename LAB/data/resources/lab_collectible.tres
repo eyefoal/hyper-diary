@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://dlmk2xe6estvb"]
+
+[sub_resource type="GDScript" id="GDScript_yhrqq"]
+script/source = "extends Resource
+class_name LabItem
+
+var value : int = 0 
+
+func 
+"
+
+[resource]
+script = SubResource("GDScript_yhrqq")
