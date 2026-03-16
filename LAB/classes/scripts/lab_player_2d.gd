@@ -3,7 +3,7 @@ class_name LabPlayer2D
 
 @export_category("Parameters")
 @export var SPEED := 300.0
-@export var FALL_SPEED := 650.0
+@export var FALL_SPEED := 500.0
 @export var WEIGHT := 10.0 
 @export var JUMP_VELOCITY := -400.0
 @export var JUMP_SPEED := 400.0

@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://k7shvscibq8e" path="res://LAB/data/resources/foreground16.tres" id="1_nbtjv"]
 [ext_resource type="PackedScene" uid="uid://bsit1wdswthki" path="res://LAB/classes/lab_player_2d.tscn" id="2_hrg0l"]
+[ext_resource type="PackedScene" uid="uid://cpq7cu80qrmtw" path="res://OTHER/bouncy_block.tscn" id="3_t30ys"]
 
 [node name="Lab101" type="Node2D" unique_id=222190404]
 
@@ -13,3 +14,9 @@ tile_set = ExtResource("1_nbtjv")
 position = Vector2(375, 521)
 
 [node name="Camera2D" type="Camera2D" parent="LabPlayer" unique_id=1879635992]
+
+[node name="BouncyBlock" parent="." unique_id=1721806075 instance=ExtResource("3_t30ys")]
+position = Vector2(216, 900)
+
+[node name="BouncyBlock2" parent="." unique_id=1293191356 instance=ExtResource("3_t30ys")]
+position = Vector2(240, 900)

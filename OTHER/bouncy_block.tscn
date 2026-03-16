@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cpq7cu80qrmtw"]
+
+[ext_resource type="Script" uid="uid://ds8e0i0cnoepj" path="res://OTHER/bouncy_block.gd" id="1_0kkbb"]
+[ext_resource type="Texture2D" uid="uid://bi2xnjqd8cgjl" path="res://OTHER/SMW_tileset.PNG" id="2_1qdq3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmrjd"]
+size = Vector2(18, 18)
+
+[node name="BouncyBlock" type="Area2D" unique_id=1721806075]
+script = ExtResource("1_0kkbb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1464876055]
+texture = ExtResource("2_1qdq3")
+region_enabled = true
+region_rect = Rect2(16.406204, 169.74655, 16.593796, 16.253448)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=866581994]
+shape = SubResource("RectangleShape2D_jmrjd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
