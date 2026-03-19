@@ -3,11 +3,13 @@ class_name LabPlayer2D
 
 @export_category("Parameters")
 @export var SPEED := 300.0
-@export var FALL_SPEED := 500.0
+@export var FALL_SPEED := 300.0
 @export var WEIGHT := 10.0 
 @export var JUMP_VELOCITY := -400.0
 @export var JUMP_SPEED := 400.0
 @export var JUMP_CUT : float
+
+@export var input : InputComponent 
 
 func _ready() -> void:
 	print("Hello Worlds!")
@@ -32,5 +34,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	input.update()
 
 	move_and_slide()

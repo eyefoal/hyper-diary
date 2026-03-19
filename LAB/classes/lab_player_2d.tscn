@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cmcl1wyx0khjl" path="res://LAB/classes/scripts/lab_player_2d.gd" id="1_dfvnb"]
 [ext_resource type="Texture2D" uid="uid://bhxllq1sjup3a" path="res://LAB/assets/misc/all_sprites/gbcatty1.png" id="2_g6ptg"]
+[ext_resource type="Script" uid="uid://tdg7f882j2h5" path="res://LAB/data/components/input_component.gd" id="3_g6ptg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfvnb"]
 size = Vector2(12, 18)
 
-[node name="LabPlayer" type="CharacterBody2D" unique_id=708923162]
+[node name="LabPlayer" type="CharacterBody2D" unique_id=708923162 node_paths=PackedStringArray("input")]
 script = ExtResource("1_dfvnb")
+input = NodePath("InputComponent")
 
 [node name="Gbcatty1" type="Sprite2D" parent="." unique_id=272016728]
 texture = ExtResource("2_g6ptg")
@@ -15,3 +17,6 @@ texture = ExtResource("2_g6ptg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1985278492]
 shape = SubResource("RectangleShape2D_dfvnb")
 debug_color = Color(0.65670675, 0.41358256, 0.8074941, 0.05490196)
+
+[node name="InputComponent" type="Node" parent="." unique_id=1292985060]
+script = ExtResource("3_g6ptg")
