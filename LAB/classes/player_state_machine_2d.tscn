@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ccempvwsc7u5k"]
+
+[ext_resource type="Script" uid="uid://coyjinryxdue4" path="res://LAB/classes/scripts/player_state_machine_2d.gd" id="1_ipfdp"]
+[ext_resource type="Texture2D" uid="uid://r64p1k41681x" path="res://LAB/assets/misc/all_sprites/SSS/TRUE_base_player).png" id="2_gescb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ng5uq"]
+
+[node name="PlayerStateMachine2D" type="CharacterBody2D" unique_id=1926070362]
+script = ExtResource("1_ipfdp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1771986009]
+texture = ExtResource("2_gescb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1011186509]
+shape = SubResource("CapsuleShape2D_ng5uq")
