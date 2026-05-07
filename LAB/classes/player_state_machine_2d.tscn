@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://r64p1k41681x" path="res://LAB/assets/misc/all_sprites/SSS/TRUE_base_player).png" id="2_gescb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ng5uq"]
+radius = 5.0
+height = 22.0
 
 [node name="PlayerStateMachine2D" type="CharacterBody2D" unique_id=1926070362]
 script = ExtResource("1_ipfdp")
@@ -12,4 +14,5 @@ script = ExtResource("1_ipfdp")
 texture = ExtResource("2_gescb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1011186509]
+position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_ng5uq")
