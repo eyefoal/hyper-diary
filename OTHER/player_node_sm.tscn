@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cc4nwc1birhqn"]
+
+[ext_resource type="Script" uid="uid://cfs254pamj2fe" path="res://player_nb_statemachine.gd" id="1_k4r6l"]
+[ext_resource type="Texture2D" uid="uid://dixltnjuk2qn8" path="res://LAB/assets/misc/all_sprites/crackcochroma2.png" id="2_ywfjl"]
+[ext_resource type="Script" uid="uid://bwip12gvq07sj" path="res://OTHER/playernodeSM.gd" id="3_2px07"]
+[ext_resource type="Script" uid="uid://dq6djk6wfs5on" path="res://OTHER/idle_state.gd" id="4_kk3qh"]
+[ext_resource type="Script" uid="uid://df7bamvykrlok" path="res://OTHER/fall_state.gd" id="5_5bodc"]
+[ext_resource type="Script" uid="uid://cgysknshl85ty" path="res://OTHER/jump_state.gd" id="6_2px07"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xsgum"]
+
+[node name="PlayerNodeSM" type="CharacterBody2D" unique_id=1478814440]
+script = ExtResource("1_k4r6l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1422309536]
+texture = ExtResource("2_ywfjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=693304686]
+shape = SubResource("CapsuleShape2D_xsgum")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1070644673]
+script = ExtResource("3_2px07")
+
+[node name="IdleState" type="Node" parent="StateMachine" unique_id=1346724573]
+script = ExtResource("4_kk3qh")
+metadata/_custom_type_script = "uid://beybio02ihmml"
+
+[node name="FallState" type="Node" parent="StateMachine" unique_id=774939469]
+script = ExtResource("5_5bodc")
+
+[node name="JumpState" type="Node" parent="StateMachine" unique_id=1648326962]
+script = ExtResource("6_2px07")

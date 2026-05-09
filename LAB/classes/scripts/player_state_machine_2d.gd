@@ -14,7 +14,7 @@ enum STATE {
 const WALK_SPEED := 250.0
 const WALK_ACCELERATION := 600.0
 const FRICTION := 500.0
-const JUMP_HEIGHT := -640.0
+const JUMP_HEIGHT := -600.0
 const PJUMP_HEIGHT := -280.0
 const CROUCH_JUMP := -220.0
 const JUMP_SPEED := 300.0
@@ -99,7 +99,7 @@ func _physics_process(delta: float) -> void:
 				switch_state(STATE.CROUCH_JUMP)
 		
 		STATE.CROUCH_JUMP:
-			velocity.x = move_toward(velocity.x, direction * WALK_SPEED, WALK_ACCELERATION * delta)
+			velocity.x = move_toward(velocity.x, direction * (WALK_SPEED * 2), WALK_ACCELERATION * delta)
 			velocity.y += FALL_SPEED * delta
 			if Input.is_action_just_released("jump"):
 				switch_state(STATE.FALL)

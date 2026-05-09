@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://nj3o25fmi8ld"]
+
+[ext_resource type="Texture2D" uid="uid://bfkp2wccar6x7" path="res://LAB/assets/misc/all_sprites/debug_dummy_wood.png" id="1_qmn0i"]
+[ext_resource type="Script" uid="uid://6votj5kmjrdv" path="res://movementstatemachine.gd" id="2_hsjlc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qik5m"]
+radius = 5.0
+height = 20.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=219560732]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=272533204]
+shape = SubResource("CapsuleShape2D_qik5m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1886706664]
+texture = ExtResource("1_qmn0i")
+
+[node name="StateMachine" type="Node" parent="." unique_id=911856682 node_paths=PackedStringArray("body")]
+script = ExtResource("2_hsjlc")
+body = NodePath("..")
